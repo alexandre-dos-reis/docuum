@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+    docuum:
+        image: stephanmisc/docuum:0.21.1
+        container_name: docuum
+        init: true
+        restart: always
+        command: --threshold '10 GB'
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - docuum:/root
+volumes:
+  documm:
