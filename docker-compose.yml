@@ -8,7 +8,7 @@ services:
         restart: always
         command: --threshold '10 GB'
         volumes:
-            - '/var/run/docker.sock:/var/run/docker.sock'
+            - /var/run/docker.sock:/var/run/docker.sock
             - docuum:/root
 volumes:
   documm:
